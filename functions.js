@@ -7,10 +7,6 @@ const findMean = (numsArray) => {
 
 const findMedian = (sortedNumsArray) => {
     const middleIndex = Math.floor(sortedNumsArray.length/2);
-    // console.log(sortedNumsArray);
-    // console.log(sortedNumsArray.length/2);
-    // console.log(sortedNumsArray[Math.floor(sortedNumsArray.length/2)]);
-
     if (sortedNumsArray.length % 2 === 0) {
         const median = (sortedNumsArray[middleIndex] + sortedNumsArray[middleIndex -1]) / 2;
         return median;
@@ -32,7 +28,6 @@ const findMode = (sortedNumsArray) => {
             obj[num] ++;
         }
     });
-    // console.log(obj);
 
     let highestVal = 0;
     let highestValKey = 0;
@@ -45,9 +40,6 @@ const findMode = (sortedNumsArray) => {
             highestValKey = key;
         }
     }
-    
-    // return res.json({response: {operation: "mode", number: Number(highestValKey), count: highestVal}});
-
     return Number(highestValKey);
 
 //     // https://stackoverflow.com/questions/52898456/simplest-way-of-finding-mode-in-javascript
